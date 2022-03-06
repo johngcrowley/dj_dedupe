@@ -1,0 +1,4 @@
+pandas
+nltk
+python-levenshtein
+fuzzywuzzy
