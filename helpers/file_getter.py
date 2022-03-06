@@ -89,7 +89,8 @@ class djdisk():
             if matches:
                 print(f'\n {len(matches)} matches found: {filename} : {matches}\n')
                 self.recursion += 1
-                self.round += 1
+                self.round += 1 #TODO: use ratio / and round pattern
+
                 # if its not an empty list, update our match_dict with filename (k) and its list of duplicates (v)
                 self.match_dict[filename] = matches
                 matches.append(filename)
@@ -139,5 +140,6 @@ class djdisk():
         [self.archive(filepath) for filename, filepath in file_path_dict.items() for dupe in dupes if filename in dupe]
 
 
+# ---- Initiate Program Here for now ------
 dedupe = djdisk()
 dedupe.build_dupe_pile()
